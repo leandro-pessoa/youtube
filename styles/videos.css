@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.videos-container::-webkit-scrollbar-thumb {
+    background: var(--regular-gray);
+}
+
+.videos-container::-webkit-scrollbar-thumb:hover {
+    background: var(--extra-regular-gray);
+}

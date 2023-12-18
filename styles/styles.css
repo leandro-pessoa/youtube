@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@import url('./header.css');
+@import url('./principal.css');
+@import url('./topics.css');
+@import url('./menu-lateral.css');
+@import url('./menu-lateral-menor.css');
+@import url('./videos.css');
+@import url('./bottom-menu.css');
+
+:root {
+    --tablet-breakpoint: 541px;
+    --notebook-breakpoint: 769px;
+    --desktop-breakpoint: 1280px;
+    --font-principal: 'Roboto', sans-serif;
+    --white: #FFFFFF;
+    --full-black: #000000;
+    --black: #0F0F0F;
+    --dark-gray: #363636;
+    --regular-gray: #606060;
+    --extra-regular-gray: #8a8a8a;
+    --light-gray: #CCCCCC;
+    --extra-light-gray: #e6e6e6;
+    --xx-light-gray: #f2f2f2;
+    --blue: #3b3bdf;
+}
+
+body{
+    font-family: var(--font-principal);
+    font-weight: 400;
+    font-size: 1rem;
+    height: 100vh;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 32px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* ICONS */
+
+.material-symbols-outlined {
+    color: var(--full-black);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.material-icons {
+    font-variation-settings:
+    'opsz' 48
+}
+
+@media (min-width: 769px){
+
+    /* ICONS */
+
+    .material-symbols-outlined {
+        font-variation-settings:
+        'opsz' 48
+    }
+}

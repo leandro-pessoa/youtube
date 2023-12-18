@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="shortcut icon" href="assets/icons8-reproduzir-youtube-48.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="./app/header.js" defer></script>
+    <script src="./app/aside.js" defer></script>
+    <script src="./app/topics.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="cabecalho__container-logo">
+            <button class="cabecalho__icon-button" data-menu-button>
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <a href="#">
+                <img src="./assets/youtube-logo-9.png" alt="Logo do YouTube" class="cabecalho__logo">
+            </a>
+        </section>
+        <section class="cabecalho__container-input">
+            <div class="cabecalho__search-container" data-search-container>
+                <span class="material-symbols-outlined search-container__icon" data-icon>search</span>
+                <input type="search" name="busca" id="busca"  placeholder="Pesquisar" class="container-input__search" data-search>
+                <span class="material-icons-sharp keyboard">keyboard</span>
+            </div>
+            <button class="container-input__search-btn">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="container-input__microphone-btn">
+                <span class="material-icons-sharp mic">mic</span>
+            </button>
+        </section>
+        <section class="cabecalho__container-icons">
+            <div class="container-icons__smartphone">
+                <button class="icon-button"><span class="material-symbols-outlined">cast</span></button>
+                <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
+                <button class="icon-button"><span class="material-symbols-outlined">search</span></button>
+            </div>
+            <div class="container-icons__outros">
+                <button class="icon-button"><span class="material-symbols-outlined">video_call</span></button>
+                <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
+                <button class="icon-button"><span class="material-icons-sharp">account_circle</span></button>
+            </div>
+        </section>
+    </header>
+    <main class="principal-container">
+        <aside class="menu-lateral" data-menu-lateral>
+            <ul>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">home</span>Início
+                    </a>
+                </li>
+                <li class="list__item">
+                    <span class="material-symbols-outlined">play_circle</span>Shorts
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">subscriptions</span>Inscrições
+                    </a>
+                </li>
+
+                <hr>
+
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        Você<span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">history</span>Histórico
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">schedule</span>Assistir mais tarde
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">thumb_up</span>Vídeos marcados com "Gostei"
+                    </a>
+                </li>
+
+                <hr>
+
+                <li class="list__item-title">
+                    Inscrições
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">account_circle</span>Canal
+                    </a>
+                </li>
+                <li class="list__item">
+                    <span class="material-symbols-outlined">expand_more</span>Mostrar mais x
+                </li>
+
+                <hr>
+
+                <li class="list__item-title">
+                    Explorar
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">local_fire_department</span>Em alta
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">shopping_bag</span>Shopping
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">music_note</span>Música
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">movie</span>Filmes 
+                    </a>    
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">sensors</span>Ao vivo
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">stadia_controller</span>Jogos
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">newspaper</span>Notícias
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">trophy</span>Esportes
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">lightbulb</span>Aprender
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">podcasts</span>Podcasts
+                    </a>
+                </li>
+
+                <hr>
+
+                <li class="list__item-title">
+                    Mais do YouTube
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <img src="./assets/icons8-reproduzir-youtube-48.png" alt="Logo do YouTube" class="item-link__img">YouTube Premium
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <img src="./assets/icons8-musica-youtube-48.png" alt="Logo do YouTube Music" class="item-link__img">YouTube Music
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <img src="./assets/youtube-kids-icon.png" alt="Logo do YouTube Kids" class="item-link__img">YouTube Kids
+                    </a>
+                </li>
+
+                <hr>
+
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">settings</span>Configurações
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="#" class="list__item-link">
+                        <span class="material-symbols-outlined">flag</span>Histórico de denúncias
+                    </a>    
+                </li>
+                <li class="list__item">
+                    <span class="material-symbols-outlined">help</span>Ajuda
+                </li>
+                <li class="list__item">
+                    <span class="material-symbols-outlined">feedback</span>Enviar feedback
+                </li>
+
+                <hr>
+            </ul>
+
+            <ul class="small-list">
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Sobre</a>
+                    <a href="#" class="small-list__item-link">Imprensa</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Direitos autorais</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Entre em contato</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Criadores de conteúdo</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Publicidade</a>
+                    <a href="#" class="small-list__item-link">Desenvolvedores</a>
+                </li>
+
+                <br>
+
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Termos</a>
+                    <a href="#" class="small-list__item-link">Privacidade</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Política e segurança</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Como funciona o YouTube</a>
+                </li>
+                <li class="small-list__item">
+                    <a href="#" class="small-list__item-link">Testar os novos recursos</a>
+                </li>
+            </ul>
+
+            <br>
+
+            <small class="menu-lateral__copy">
+                &copy;
+                <span data-date></span>
+                Google / Leandro Pessoa
+            </small>
+
+        </aside>
+
+        <aside class="menu-lateral-menor" data-menu-lateral-menor>
+            <ul class="menor-list">
+                <li class="menor-list__item">
+                    <a href="#" class="menor-list__item-link">
+                        <span class="material-symbols-outlined">home</span>
+                        Início
+                    </a>
+                </li>
+                <li class="menor-list__item">
+                    <a href="#" class="menor-list__item-link"> 
+                        <span class="material-symbols-outlined">play_circle</span>
+                        Shorts
+                    </a>
+                </li>
+                <li class="menor-list__item">
+                    <a href="#" class="menor-list__item-link">
+                        <span class="material-symbols-outlined">subscriptions</span>
+                        Inscrições
+                    </a>
+                </li>
+                <li class="menor-list__item">
+                    <a href="#" class="menor-list__item-link">
+                        <span class="material-symbols-outlined">video_library</span>
+                        Você
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="topics-container" data-topics>
+            <ul class="topics-list">
+                <li class="topics__list-item ativo">
+                    Tudo
+                </li>
+                <li class="topics__list-item">
+                    Jogos 
+                </li>
+                <li class="topics__list-item">
+                    Notícias
+                </li>
+                <li class="topics__list-item">
+                    Podcast
+                </li>
+                <li class="topics__list-item">
+                    Programação
+                </li>
+                <li class="topics__list-item">
+                    Música
+                </li>
+                <li class="topics__list-item">
+                    História
+                </li>
+                <li class="topics__list-item">
+                    Ao vivo
+                </li>
+                <li class="topics__list-item">
+                    Enviados recentemente
+                </li>
+                <li class="topics__list-item">
+                    Postagens
+                </li>
+                <li class="topics__list-item">
+                    Novidades para você
+                </li>
+            </ul>
+        </section>
+
+        <section class="videos-container">
+            
+        </section>
+
+        <section class="bottom-menu">
+            <ul class="bottom-menu__list">
+                <li class="bottom-menu__list-item">
+                    <span class="material-symbols-outlined">home</span>
+                    Início
+                </li>
+                <li class="bottom-menu__list-item">
+                    <span class="material-symbols-outlined">play_circle</span>
+                    Shorts
+                </li>
+                <li class="bottom-menu__list-item">
+                    <span class="material-symbols-outlined add-circle">add_circle</span>
+                </li>
+                <li class="bottom-menu__list-item">
+                    <span class="material-symbols-outlined">subscriptions</span>
+                    Incrições
+                </li>
+                <li class="bottom-menu__list-item">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    Você
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

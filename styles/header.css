@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3em .5em .7em .7em;
+    position: fixed;
+    width: 98%;
+}
+
+/* SECTION LOGO E MENU */
+
+.cabecalho__icon-button {
+    display: none;
+    padding: .5em .6em;
+    margin-right: 1.2em;
+    background-color: transparent;
+    border: none;
+    border-radius: 32px;
+    transition: ease .1s;
+}
+
+.cabecalho__icon-button:hover {
+    cursor: pointer;
+    background-color: var(--extra-light-gray);
+}
+
+.cabecalho__logo {
+    width: 6em;
+}
+
+/* SECTION SEARCH INPUT */
+
+.cabecalho__container-input {
+    display: none;
+}
+
+.search-container__icon {
+    display: none;
+    padding-left: .3em;
+}
+
+.cabecalho__search-container {
+    display: flex;
+    border: 1px solid var(--light-gray);
+    border-right: none;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 100%;
+    padding: .4em;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.089);
+}
+
+.cabecalho__search-container-focus {
+    outline: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.185);
+}
+
+.container-input__search {
+    font-size: 1rem;
+    padding-left: 1em;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.container-input__search:focus {
+    outline: 0;
+}
+
+.container-input__search-btn {
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border: 1px solid var(--light-gray);
+    margin-right: 1em;
+    transition: ease .1s;
+}
+
+.container-input__search-btn:hover {
+    cursor: pointer;
+    background-color: var(--extra-light-gray);
+}
+
+.keyboard {
+    color: var(--light-gray);
+}
+
+.container-input__microphone-btn {
+    border-radius: 50%;
+    height: 35px;
+    border: none;
+    align-self: center;
+    transition: ease .1s;
+}
+
+.container-input__microphone-btn:hover {
+    cursor: pointer;
+    background-color: var(--light-gray);
+}   
+
+.mic {
+    transform: translate(0px, 1px);
+    color: var(--black);
+}
+
+/* SECTION ICONS */
+
+.container-icons__outros {
+    display: none;
+}
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 32px;
+    margin: 0 .2em;
+    padding: .5em .6em;
+    transition: ease .1s;
+}
+
+.icon-button:hover {
+    cursor: pointer;
+    background-color: var(--extra-light-gray);
+}
+
+@media (min-width: 541px) {
+
+    /* SECTION SEARCH INPUT */
+
+    .cabecalho__container-input {
+        display: flex;
+        width: 50%;
+    }
+
+    .container-input__search-btn {
+        padding: 0 .8em;
+    }
+
+    /* SECTION ICONS */
+
+    .container-icons__smartphone {
+        display: none;
+    }
+
+    .container-icons__outros {
+        display: block;
+    }
+}
+
+@media (min-width: 769px){
+
+    .cabecalho {
+        padding: .5em 1em 1em 1em;
+    }
+
+    /* SECTION SEARCH INPUT  */
+
+    .cabecalho__container-input {
+        width: 45%;
+    }
+
+    .container-input__search-btn {
+        padding: 0 1.2em;
+    }
+
+    /* SECTION ICONS */
+
+    .icon-button {
+        margin: 0 .5em;
+    }
+
+}
+
+@media (min-width: 1281px) {
+
+    /* SECTION LOGO E MENU */
+
+    .cabecalho__icon-button {
+        display: inline-block;
+    }
+}
