@@ -65,13 +65,13 @@
                         <span class="material-symbols-outlined">subscriptions</span>Inscrições
                     </a>
                 </li>
+            </ul>
 
-                <hr>
+            <hr>
 
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        Você<span class="material-symbols-outlined">chevron_right</span>
-                    </a>
+            <ul>
+                <li class="list__item list__item-title">
+                    Você<span class="material-symbols-outlined">chevron_right</span>
                 </li>
                 <li class="list__item">
                     <a href="#" class="list__item-link">
@@ -88,53 +88,33 @@
                         <span class="material-symbols-outlined">thumb_up</span>Vídeos marcados com "Gostei"
                     </a>
                 </li>
+            </ul>
 
-                <hr>
+            <hr>
 
-                <li class="list__item-title">
+            <div>
+                <h2 class="list__item-title">
                     Inscrições
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">account_circle</span>Canal
-                    </a>
-                </li>
-                <li class="list__item">
-                    <span class="material-symbols-outlined">expand_more</span>Mostrar mais x
-                </li>
+                </h2>
+                <ul data-canais>
+                    <!-- conteúdo gerado pelo javascript -->
+                </ul>
+                <button class="list__item button" data-button-mais>
+                    <span class="material-symbols-outlined">expand_more</span>
+                    Mostrar mais <span class="numero" data-canais-numero></span>
+                </button>
+                <ul class="canais-ocultos" data-canais-ocultos>
+                    <!-- conteúdo gerado pelo javascript -->
+                </ul>
+                <button class="list__item button button--menos" data-button-menos>
+                    <span class="material-symbols-outlined">expand_less</span>
+                    Mostrar menos
+                </button>
+            </div>
 
-                <hr>
+            <hr>
 
+            <ul>
                 <li class="list__item-title">
                     Explorar
                 </li>
@@ -155,8 +135,8 @@
                 </li>
                 <li class="list__item">
                     <a href="#" class="list__item-link">
-                        <span class="material-symbols-outlined">movie</span>Filmes 
-                    </a>    
+                        <span class="material-symbols-outlined">movie</span>Filmes
+                    </a>
                 </li>
                 <li class="list__item">
                     <a href="#" class="list__item-link">
@@ -188,9 +168,11 @@
                         <span class="material-symbols-outlined">podcasts</span>Podcasts
                     </a>
                 </li>
+            </ul>
 
-                <hr>
+            <hr>
 
+            <ul>
                 <li class="list__item-title">
                     Mais do YouTube
                 </li>
@@ -209,9 +191,11 @@
                         <img src="./assets/youtube-kids-icon.png" alt="Logo do YouTube Kids" class="item-link__img">YouTube Kids
                     </a>
                 </li>
+            </ul>
 
-                <hr>
+            <hr>
 
+            <ul>
                 <li class="list__item">
                     <a href="#" class="list__item-link">
                         <span class="material-symbols-outlined">settings</span>Configurações
@@ -220,7 +204,7 @@
                 <li class="list__item">
                     <a href="#" class="list__item-link">
                         <span class="material-symbols-outlined">flag</span>Histórico de denúncias
-                    </a>    
+                    </a>
                 </li>
                 <li class="list__item">
                     <span class="material-symbols-outlined">help</span>Ajuda
@@ -228,9 +212,9 @@
                 <li class="list__item">
                     <span class="material-symbols-outlined">feedback</span>Enviar feedback
                 </li>
-
-                <hr>
             </ul>
+
+            <hr>
 
             <ul class="small-list">
                 <li class="small-list__item">
@@ -307,8 +291,13 @@
             </ul>
         </aside>
 
-        <section class="topics-container" data-topics>
-            <ul class="topics-list">
+        <section class="topics-container">
+            <div class="topics__button-container topics__button-container--left">
+                <button class="topics__button topics__button--left" data-button-left>
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+            </div>
+            <ul class="topics-list" data-topics>
                 <li class="topics__list-item ativo">
                     Tudo
                 </li>
@@ -342,7 +331,27 @@
                 <li class="topics__list-item">
                     Novidades para você
                 </li>
+                <li class="topics__list-item">
+                    Teste
+                </li>
+                <li class="topics__list-item">
+                    Teste
+                </li>
+                <li class="topics__list-item">
+                    Teste
+                </li>
+                <li class="topics__list-item">
+                    Teste
+                </li>
+                <li class="topics__list-item">
+                    Teste
+                </li>
             </ul>
+            <div class="topics__button-container topics__button-container--right">
+                <button class="topics__button topics__button--right" data-button-right>
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
         </section>
 
         <section class="videos-container">
@@ -360,7 +369,7 @@
                     Shorts
                 </li>
                 <li class="bottom-menu__list-item">
-                    <span class="material-symbols-outlined add-circle">add_circle</span>
+                    <span class="material-symbols-outlined add-circle" style="font-size: 40px;">add_circle</span>
                 </li>
                 <li class="bottom-menu__list-item">
                     <span class="material-symbols-outlined">subscriptions</span>

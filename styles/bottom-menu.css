@@ -23,8 +23,8 @@
     width: 30px;
 }
 
-.add-circle {
-    font-size: 36px;
+.bottom-menu__list-item span {
+    font-size: 28px;
 }
 
 @media (min-width: 541px) {
