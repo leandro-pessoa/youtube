@@ -44,7 +44,7 @@
 }
 
 .topics__button-container {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 55px;
@@ -72,17 +72,6 @@
     cursor: pointer;
     background-color: var(--xx-light-gray);
 }
-
-/* .topics__button--left {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.topics__button--right {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-} */
 
 .topics__button span {
     font-size: 30px;
