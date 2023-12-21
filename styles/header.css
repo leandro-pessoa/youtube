@@ -21,9 +21,8 @@
     transition: ease .1s;
 }
 
-.cabecalho__icon-button:hover {
-    cursor: pointer;
-    background-color: var(--extra-light-gray);
+.cabecalho__icon-button:active {
+    background-color: var(--light-gray);
 }
 
 .cabecalho__logo {
@@ -80,9 +79,8 @@
     transition: ease .1s;
 }
 
-.container-input__search-btn:hover {
-    cursor: pointer;
-    background-color: var(--extra-light-gray);
+.container-input__search-btn:active {
+    background-color: var(--light-gray);
 }
 
 .keyboard {
@@ -97,10 +95,9 @@
     transition: ease .1s;
 }
 
-.container-input__microphone-btn:hover {
-    cursor: pointer;
-    background-color: var(--light-gray);
-}   
+.container-input__microphone-btn:active {
+    background-color: var(--extra-regular-gray);
+}
 
 .mic {
     transform: translate(0px, 1px);
@@ -122,13 +119,8 @@
     transition: ease .1s;
 }
 
-.icon-button:hover {
-    cursor: pointer;
-    background-color: var(--extra-light-gray);
-}
-
 .icon-button:active {
-    background-color: var(--extra-light-gray);
+    background-color: var(--light-gray);
 }
 
 .icon-button span {
@@ -191,4 +183,27 @@
     .cabecalho__icon-button {
         display: inline-block;
     }
+}
+
+@media (hover: hover) {
+    .cabecalho__icon-button:hover {
+        cursor: pointer;
+        background-color: var(--extra-light-gray);
+    }
+
+    .container-input__search-btn:hover {
+        cursor: pointer;
+        background-color: var(--extra-light-gray);
+    }
+
+    .container-input__microphone-btn:hover {
+        cursor: pointer;
+        background-color: var(--light-gray);
+    }  
+
+    .icon-button:hover {
+        cursor: pointer;
+        background-color: var(--extra-light-gray);
+    }
+
 }

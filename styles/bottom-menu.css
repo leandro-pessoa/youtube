@@ -21,6 +21,13 @@
     font-size: 0.625rem;
     gap: .2em;
     width: 30px;
+    padding: .5em 1em;
+    border-radius: 32px;
+    transition: ease .2s;
+}
+
+.bottom-menu__list-item:active {
+    background-color: var(--extra-light-gray);
 }
 
 .bottom-menu__list-item span {

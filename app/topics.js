@@ -5,6 +5,7 @@ const containerLeft = document.querySelector('.topics__button-container--left')
 const containerRight = document.querySelector('.topics__button-container--right')
 const leftBtn = document.querySelector('[data-button-left]')
 const rightBtn = document.querySelector('[data-button-right]')
+const topicsSection = document.querySelector('[data-container-topics]')
 
 // referências globais
 let pos = 0
@@ -80,14 +81,25 @@ const scrollPosition = () => {
     }
 }
 
+// verifica se a área do scroll é maior que a section
+// se a área de scroll for menor, os buttons de scroll desaparecerão 
+const verifyScrollWidth = () => {
+    if(!checkDevice() && topicsListContainer.scrollWidth + 3 < topicsSection.clientWidth){
+        containerLeft.style.display = 'none'
+        containerRight.style.display = 'none'
+    }
+}
+
 // coloca o scroll na posição zero ao mudar o tamanho da tela
 // e também faz aparecer o button da direita
 // tudo isso acontece caso o dispositivo for um notebook ou desktop
-const resize = () => {
+const resizeTopics = () => {
     if(!checkDevice()){
         topicsListContainer.scrollLeft = 0
+        containerLeft.style.display = 'none'
         containerRight.style.display = 'flex'
     }
+    verifyScrollWidth()
 }
 
 // listeners de evento
@@ -97,5 +109,6 @@ topicsListItem.forEach((item) => {
 topicsListContainer.addEventListener('scroll', scrollPosition)
 leftBtn.addEventListener('click', scrollLeft)
 rightBtn.addEventListener('click', scrollRight)
-window.addEventListener('resize', resize)
+window.addEventListener('resize', resizeTopics)
 window.addEventListener('load', checkDevice)
+window.addEventListener('load', verifyScrollWidth)

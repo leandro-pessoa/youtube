@@ -21,10 +21,6 @@
     background: var(--extra-regular-gray);
 }
 
-.menu-lateral:hover::-webkit-scrollbar-thumb {
-    display: block;
-}
-
 /* LIST ITEMS */
 
 .list__item {
@@ -38,13 +34,8 @@
     border-radius: 12px;
 }
 
-.list__item:hover {
-    cursor: pointer;
-    background-color: var(--xx-light-gray);
-}
-
 .list__item:active {
-    background-color: var(--xx-light-gray);
+    background-color: var(--light-gray);
 }
 
 .list__item-link {
@@ -119,5 +110,17 @@
 @media (min-width: 1281px) {
     .menu-lateral {
         display: block;
+    }
+}
+
+@media (hover: hover) {
+
+    .menu-lateral:hover::-webkit-scrollbar-thumb {
+        display: block;
+    }
+
+    .list__item:hover {
+        cursor: pointer;
+        background-color: var(--xx-light-gray);
     }
 }

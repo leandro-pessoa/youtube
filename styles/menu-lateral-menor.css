@@ -4,7 +4,7 @@
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 10%;
+    top: 64.31px;
     padding: .3em;
     height: calc(100vh - 64.31px);
 }
@@ -26,10 +26,11 @@
     padding: 1.5em 0;
     border-radius: 10px;
     width: 60px;
+    transition: ease .2s;
 }
 
-.menor-list__item-link:hover {
-    background-color: var(--extra-light-gray);
+.menor-list__item-link:active {
+    background-color: var(--light-gray);
 }
 
 @media (min-width: 541px) {
@@ -43,5 +44,12 @@
 
     .menu-lateral-menor {
         display: none;
+    }
+}
+
+@media (hover: hover) {
+
+    .menor-list__item-link:hover {
+        background-color: var(--extra-light-gray);
     }
 }

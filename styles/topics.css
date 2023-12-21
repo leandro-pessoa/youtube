@@ -8,7 +8,6 @@
     background-color: var(--white);
     width: 100%;
     left: 0;
-    padding: 0 .6em .4em 0;
 }
 
 .topics-list::-webkit-scrollbar {
@@ -71,6 +70,10 @@
 .topics__button:hover {
     cursor: pointer;
     background-color: var(--xx-light-gray);
+}
+
+.topics__button:active {
+    background-color: var(--extra-light-gray);
 }
 
 .topics__button span {
