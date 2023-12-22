@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.videos-container {
+    display: none;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    overflow-y: auto;
+}
+
 .videos-container::-webkit-scrollbar-thumb {
     background: var(--regular-gray);
 }
@@ -7,3 +15,4 @@
 .videos-container::-webkit-scrollbar-thumb:hover {
     background: var(--extra-regular-gray);
 }
+

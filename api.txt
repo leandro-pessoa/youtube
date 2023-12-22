@@ -1,0 +1,7 @@
+-- link da API -- 
+
+https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=20&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg
+
+-- chave da API -- 
+
+AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg
