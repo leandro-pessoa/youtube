@@ -5,9 +5,12 @@
     flex-direction: column;
     position: fixed;
     top: 100px;
-    width: 100%;
     height: calc(100% - 153px);
     overflow-y: auto;
+}
+
+.videos-container::-webkit-scrollbar {
+    display: none;
 }
 
 .videos-container::-webkit-scrollbar-thumb {
@@ -116,8 +119,11 @@
         gap: 1em;
         left: 75px;
         top: 120px;
-        width: calc(100% - 80px);
         height: calc(100% - 120px);
+    }
+
+    .videos-container::-webkit-scrollbar {
+        display: block;
     }
 
     .video {
@@ -133,11 +139,10 @@
 
     .videos-container {
         left: 260px;
-        width: calc(100% - 190px);
     }
 
     .video {
-        width: 30%;
+        width: 32%;
     }
 }
 

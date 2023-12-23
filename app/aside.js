@@ -3,7 +3,6 @@ const dataContainer = document.querySelector('[data-date]')
 const menuBtn = document.querySelector('[data-menu-button]')
 const menuLateral = document.querySelector('[data-menu-lateral]')
 const menuLateralMenor = document.querySelector('[data-menu-lateral-menor]')
-const topicsContainer = document.querySelector('[data-topics]')
 let canaisContainer = document.querySelector('[data-canais]')
 let canaisOcultosContainer = document.querySelector('[data-canais-ocultos]')
 let canaisNumero = document.querySelector('[data-canais-numero]')
@@ -20,20 +19,23 @@ const resizeMenu = () => {
     if(document.body.clientWidth < 1281){
         menuLateral.style.display = 'none'
         menuLateralMenor.style.display = 'block'
-        topicsContainer.style.left = '75px'
+        topicsSection.style.left = '75px'
+        topicsSection.style.width = 'calc(100% - 90px)'
         videosContainer.style.left = '75px'
     }
     else{
         menuLateral.style.display = 'block'
         menuLateralMenor.style.display = 'none'
-        topicsContainer.style.left = '240px'
+        topicsSection.style.left = '260px'
+        topicsSection.style.width = 'calc(100% - 260px)'
         videosContainer.style.left = '260px'
     }
 
     if(document.body.clientWidth < 541){
         menuLateral.style.display = 'none'
         menuLateralMenor.style.display = 'none'
-        topicsContainer.style.left = '0px'
+        topicsSection.style.left = '0px'
+        topicsSection.style.width = '100%'
         videosContainer.style.left = '0px'
     }
 }
@@ -43,13 +45,15 @@ const toggleMenu = () => {
     if(document.body.clientWidth >= 1281 && menuLateral.style.display == 'none' && menuLateralMenor.style.display == 'block'){
         menuLateral.style.display = 'block'
         menuLateralMenor.style.display = 'none'
-        topicsContainer.style.left = '240px'
+        topicsSection.style.left = '260px'
+        topicsSection.style.width = 'calc(100% - 260px)'
         videosContainer.style.left = '260px'
     }
     else{
         menuLateral.style.display = 'none'
         menuLateralMenor.style.display = 'block'
-        topicsContainer.style.left = '75px'
+        topicsSection.style.left = '75px'
+        topicsSection.style.width = 'calc(100% - 90px)'
         videosContainer.style.left = '75px'
     }
 }

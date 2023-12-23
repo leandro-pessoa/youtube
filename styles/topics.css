@@ -103,12 +103,8 @@
 @media (min-width: 1281px) {
 
     .topics-container {
-        left: 240px;
+        left: 260px;
         width: calc(100% - 260px);
-    }
-
-    .topics__list-item:first-child {
-        margin-left: 1.4em;
     }
 
     .topics__button-container {
