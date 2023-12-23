@@ -113,6 +113,12 @@
     }
 }
 
+@media (min-width: 1400px) {
+    .menu-lateral {
+        width: 230px;
+    }
+}
+
 @media (hover: hover) {
 
     .menu-lateral:hover::-webkit-scrollbar-thumb {

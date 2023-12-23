@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 .videos-container {
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 100px;
     width: 100%;
+    height: calc(100% - 153px);
     overflow-y: auto;
 }
 
@@ -14,5 +16,128 @@
 
 .videos-container::-webkit-scrollbar-thumb:hover {
     background: var(--extra-regular-gray);
+}
+
+/* IMG CONTAINER */
+
+.video__img-container {
+    position: relative;
+}
+
+.tempo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: .8em;
+    padding: .2em .3em;
+    color: var(--white);
+    font-size: .9rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.video {
+    width: 100%;
+}
+
+.video__thumb {
+    width: 100%;
+}
+
+/* TITLE CONTAINER */
+
+.video__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5em;
+    padding: .4em .7em 1.2em .7em;
+}
+
+.channel-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.title-container__logo-txt {
+    display: flex;
+    gap: 1em;
+}
+
+.video__title {
+    font-size: 1rem;
+}
+
+/* SMALL CONTAINER */
+
+.video__small-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .2em .5em;
+    margin-top: .4em;
+}
+
+.small-container__item {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: .8rem;
+    color: var(--regular-gray);
+}
+
+/* OPTIONS CONTAINER */
+
+.video__options-container {
+    width: 10%;
+}
+
+.options-button {
+    border: none;
+    background-color: transparent;
+    border-radius: 32px;
+    padding: .2em .3em;
+    transition: ease .2s;
+    transform: translate(0px, -6px);
+}
+
+.options-button:active {
+    background-color: var(--extra-light-gray);
+}
+
+@media (min-width: 541px) {
+
+    .videos-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        left: 75px;
+        top: 120px;
+        width: calc(100% - 80px);
+        height: calc(100% - 120px);
+    }
+
+    .video {
+        width: 48%;
+    }
+
+    .video__thumb {
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 1281px) {
+
+    .videos-container {
+        left: 260px;
+        width: calc(100% - 190px);
+    }
+
+    .video {
+        width: 30%;
+    }
 }
 

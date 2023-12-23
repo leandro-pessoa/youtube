@@ -21,17 +21,20 @@ const resizeMenu = () => {
         menuLateral.style.display = 'none'
         menuLateralMenor.style.display = 'block'
         topicsContainer.style.left = '75px'
+        videosContainer.style.left = '75px'
     }
     else{
         menuLateral.style.display = 'block'
         menuLateralMenor.style.display = 'none'
         topicsContainer.style.left = '240px'
+        videosContainer.style.left = '260px'
     }
 
     if(document.body.clientWidth < 541){
         menuLateral.style.display = 'none'
         menuLateralMenor.style.display = 'none'
         topicsContainer.style.left = '0px'
+        videosContainer.style.left = '0px'
     }
 }
 
@@ -41,11 +44,13 @@ const toggleMenu = () => {
         menuLateral.style.display = 'block'
         menuLateralMenor.style.display = 'none'
         topicsContainer.style.left = '240px'
+        videosContainer.style.left = '260px'
     }
     else{
         menuLateral.style.display = 'none'
         menuLateralMenor.style.display = 'block'
         topicsContainer.style.left = '75px'
+        videosContainer.style.left = '75px'
     }
 }
 

@@ -22,8 +22,8 @@
 
 .topics__list-item {
     display: flex;
+    white-space: nowrap;
     text-wrap: nowrap;
-    flex-wrap: nowrap;
     font-size: .875rem;
     padding: .6em .7em;
     margin-left: .5em;
@@ -84,15 +84,19 @@
 
     .topics-container {
         left: 75px;
-        padding: .6em;
+        padding: .6em 0;
         width: calc(100% - 90px);
-    }   
+    } 
 }
 
 @media (min-width: 769px) {
 
     .topics__list-item {
         margin-left: .8em;
+    }
+
+    .topics__list-item:first-child {
+        margin-left: 0;
     }
 }
 
@@ -101,6 +105,10 @@
     .topics-container {
         left: 240px;
         width: calc(100% - 260px);
+    }
+
+    .topics__list-item:first-child {
+        margin-left: 1.4em;
     }
 
     .topics__button-container {
