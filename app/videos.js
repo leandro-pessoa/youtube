@@ -13,12 +13,31 @@ const getChannelThumb = async (channelId) => {
     }
 }
 
+const formatarTempo = (tempo) => {
+    const duration = moment.duration(tempo)
+    if(moment.duration(tempo).hours() == '0'){
+        if(duration.seconds().length == 1) {
+            tempo = `${duration.minutes()}:${duration.seconds()}`
+        }
+        tempo = `${duration.minutes()}:${duration.seconds()}`
+    }
+    else{
+
+    }
+
+    return tempo
+}
+
 // renderiza cada vídeo adiquirido pela função 'getVideos'
 // tembém é executada a função 'getChannelThumb' 
 const renderizarVideos = (videos) => {
     videos.forEach((video) => {
         const promise = getChannelThumb(video.snippet.channelId)
         promise.then((data) => {
+
+            let tempo = video.contentDetails.duration
+            console.log(formatarTempo(tempo))
+
             const template = `
             <div class="video">
                 <div class="video__img-container">
