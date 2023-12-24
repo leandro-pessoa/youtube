@@ -21,6 +21,14 @@
     background: var(--extra-regular-gray);
 }
 
+.video {
+    width: 100%;
+}
+
+.video__link {
+    text-decoration: none;
+}
+
 /* IMG CONTAINER */
 
 .video__img-container {
@@ -40,10 +48,6 @@
     font-size: .9rem;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.534);
-}
-
-.video {
-    width: 100%;
 }
 
 .video__thumb {
@@ -73,6 +77,7 @@
 
 .video__title {
     font-size: 1rem;
+    color: var(--black);
 }
 
 /* SMALL CONTAINER */

@@ -13,57 +13,164 @@ const getChannelThumb = async (channelId) => {
     }
 }
 
+// retorna o tempo com a formatação correta
 const formatarTempo = (tempo) => {
     const duration = moment.duration(tempo)
+    
     if(moment.duration(tempo).hours() == '0'){
-        if(duration.seconds().length == 1) {
+        if(duration.seconds() < 10) {
+            tempo = `${duration.minutes()}:0${duration.seconds()}`
+        }
+        else {
             tempo = `${duration.minutes()}:${duration.seconds()}`
         }
-        tempo = `${duration.minutes()}:${duration.seconds()}`
     }
     else{
-
+        if(duration.minutes() < 10 && duration.seconds() < 10){
+            tempo = `${duration.hours()}:0${duration.minutes()}:0${duration.seconds()}`
+        }
+        else if(duration.minutes() < 10){
+            tempo = `${duration.hours()}:0${duration.minutes()}:${duration.seconds()}`
+        }
+        else if(duration.seconds() < 10){
+            tempo = `${duration.hours()}:${duration.minutes()}:0${duration.seconds()}`
+        }
+        else {
+            tempo = `${duration.hours()}:${duration.minutes()}:${duration.seconds()}`
+        }
     }
 
     return tempo
 }
 
+// retorna as views do vídeo com a formatação correta
+const formatarViews = (views) => {
+    if(views < 1000){
+        return `${views} visualizações`
+    }
+    if(views >= 1000 && views < 1000000){
+        return `${(views / 1000).toFixed(0)} mil visualizações`
+    }
+    if(views >= 1000000 && views < 1000000000){
+        return `${(views / 1000000).toFixed(1)} mi visualizações`
+    }
+    if(views >= 1000000000){
+        return `${views / 1000000000} bi visualizações`
+    }
+}
+
+// retorna a data do vídeo com a formatação correta
+const formatarData = (data) => {
+
+    // constantes utilizadas nas condicionais
+    const dataAtual = new Date()
+    const dataFormatada = new Date(data)
+
+    const segundoAtual = dataAtual.getSeconds()
+    const segundoVideo = dataFormatada.getSeconds()
+
+    const minutoAtual = dataAtual.getMinutes()
+    const minutoVideo = dataFormatada.getMinutes()
+
+    const horaAtual = dataAtual.getHours()
+    const horaVideo = dataFormatada.getHours()
+
+    const diaAtual = dataAtual.getDate()
+    const diaVideo = dataFormatada.getDate()
+
+    const mesAtual = dataAtual.getMonth()
+    const mesVideo = dataFormatada.getMonth()
+
+    const anoAtual = dataAtual.getFullYear()
+    const anoVideo = dataFormatada.getFullYear()
+
+    // condicionais
+    if(segundoAtual - segundoVideo < 60 && minutoAtual == minutoVideo && horaAtual == horaVideo && diaAtual == diaVideo && mesAtual == mesVideo && anoAtual == anoVideo){
+        const cond = segundoAtual - segundoVideo > 1 ? 'segundos' : 'segundo'
+        return `há ${segundoAtual - segundoVideo} ${cond}`
+    }
+
+    if(minutoAtual - minutoVideo < 60 && horaAtual == horaVideo && diaAtual == diaVideo && mesAtual == mesVideo && anoAtual == anoVideo){
+        const cond = minutoAtual - minutoVideo > 1 ? 'minutos' : 'minuto'
+        return `há ${minutoAtual - minutoVideo} ${cond}`
+    }
+
+    if(horaAtual - horaVideo && diaAtual == diaVideo && mesAtual == mesVideo && anoAtual == anoVideo){
+        const cond = horaAtual - horaVideo > 1 ? 'horas' : 'hora'
+        return `há ${horaAtual - horaVideo} ${cond}`
+    }
+
+    if(diaAtual - diaVideo < 28 && mesAtual == mesVideo && anoAtual == anoVideo){
+        const cond = diaAtual - diaVideo > 1 ? 'dias' : 'dia'
+        return `há ${diaAtual - diaVideo} ${cond}`
+    }
+
+    if(mesAtual - mesVideo < 12 && anoAtual == anoVideo){
+        const cond = mesAtual - mesVideo > 1 ? 'meses' : 'mês'
+        return `há ${mesAtual - mesVideo} ${cond}` 
+    }
+
+    if(anoAtual - anoVideo >= 1){
+        const cond = anoAtual - anoVideo > 1 ? 'anos' : 'ano'
+        return `há ${anoAtual - anoVideo} ${cond}`  
+    }
+}
+
 // renderiza cada vídeo adiquirido pela função 'getVideos'
-// tembém é executada a função 'getChannelThumb' 
+// também são executadas as funções 'getChannelThumb', 'formatarTempo' 
 const renderizarVideos = (videos) => {
+
+    // laço de repetição com o array vindo do parâmetro
     videos.forEach((video) => {
+
+        // obtenção do return da função 'getChannelThumb'
         const promise = getChannelThumb(video.snippet.channelId)
         promise.then((data) => {
 
-            let tempo = video.contentDetails.duration
-            console.log(formatarTempo(tempo))
+            // constantes vindas de cada vídeo
+            const urlImg = video.snippet.thumbnails.maxres.url
+            const titulo = video.snippet.localized.title
+            const tempo = video.contentDetails.duration
+            const tituloCanal = video.snippet.channelTitle
+            const canalId = video.snippet.channelId
+            const views = video.statistics.viewCount
+            const publicadoHa = video.snippet.publishedAt
 
+            // template que será renderizado no HTML para cada vídeo
             const template = `
             <div class="video">
-                <div class="video__img-container">
-                    <img src="${video.snippet.thumbnails.maxres.url}" alt="thumnail do vídeo com o título ${video.snippet.localized.title}" class="video__thumb">
-                    <div class="tempo-container">5:00</div>
-                </div>
+                <a href="https://youtube.com" class="video__link">
+                    <div class="video__img-container">
+                        <img src="${urlImg}" alt="thumnail do vídeo com o título ${titulo}" class="video__thumb">
+                        <div class="tempo-container">${formatarTempo(tempo)}</div>
+                    </div>
+                </a>
                 <div class="video__title-container">
                     <div class="title-container__logo-txt">
-                       <img src="${data}" alt="Logo do canal ${video.snippet.channelTitle}" class="channel-logo">
-                       <div>
-                            <h2 class="video__title">${video.snippet.localized.title}</h2>
-                            <div class="video__small-container">
-                                <small class="small-container__item">${video.snippet.channelTitle}</small>
-                                <small class="small-container__item">1,8 mi visualizações</small>
-                                <small class="small-container__item">há 5 horas</small>
+                        <a href="https://youtube.com" target="_blank">
+                            <img src="${data}" alt="Logo do canal ${tituloCanal}" class="channel-logo">
+                        </a>
+                        <a href="" class="video__link">
+                            <div>
+                                <h2 class="video__title">${titulo}</h2>
+                                <div class="video__small-container">
+                                    <small class="small-container__item">${tituloCanal}</small>
+                                    <small class="small-container__item">${formatarViews(views)}</small>
+                                    <small class="small-container__item">${formatarData(publicadoHa)}</small>
+                                </div>
                             </div>
-                       </div>
+                        </a>
                     </div>
                     <div class="video__options-container">
                         <button class="options-button">
                             <span class="material-symbols-outlined">more_vert</span>
                         </button>
                     </div>
-                </div>  
+                </div>
             </div>
         `
+
+        // inserção do template no container
         videosContainer.innerHTML += template
         })
     })
@@ -84,4 +191,4 @@ const getVideos = async () => {
 }
 
 // executa a função 'getVideos'
-getVideos()
+//getVideos()
