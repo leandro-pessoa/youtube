@@ -14,6 +14,7 @@
     <script src="./app/aside.js" defer></script>
     <script src="./app/topics.js" defer></script>
     <script src="./app/videos.js" defer></script>
+    <script src="./app/theme.js" defer></script>
 </head>
 <body>
     <header class="cabecalho">
@@ -43,11 +44,21 @@
                 <button class="icon-button"><span class="material-symbols-outlined">cast</span></button>
                 <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
                 <button class="icon-button"><span class="material-symbols-outlined">search</span></button>
+                <button class="icon-button" data-theme-button>
+                    <span class="material-symbols-outlined">
+                        light_mode <!-- dark_mode -->
+                    </span>
+                </button>
             </div>
             <div class="container-icons__outros">
                 <button class="icon-button"><span class="material-symbols-outlined">video_call</span></button>
                 <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
                 <button class="icon-button"><span class="material-icons-sharp">account_circle</span></button>
+                <button class="icon-button" data-theme-button>
+                    <span class="material-symbols-outlined">
+                        light_mode <!-- dark_mode -->
+                    </span>
+                </button>
             </div>
         </section>
     </header>
@@ -289,6 +300,14 @@
                         <span class="material-symbols-outlined">video_library</span>
                         Você
                     </a>
+                </li>
+                <li class="menor-list__item">
+                    <button class="menor-list__item-link menor-list__item--button" data-theme-button>
+                        <span class="material-symbols-outlined">
+                            light_mode <!-- dark_mode -->
+                        </span>
+                        Tema
+                    </button>
                 </li>
             </ul>
         </aside>

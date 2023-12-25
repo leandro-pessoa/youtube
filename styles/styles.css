@@ -24,6 +24,7 @@
     --light-gray: #CCCCCC;
     --extra-light-gray: #e6e6e6;
     --xx-light-gray: #f2f2f2;
+    --tx-light-gray: #f1f1f1;
     --blue: #3b3bdf;
 }
 
@@ -32,6 +33,7 @@ body{
     font-weight: 400;
     font-size: 1rem;
     height: 100vh;
+    background-color: var(--white);
 }
 
 /* SCROLLBAR */
@@ -60,17 +62,6 @@ body{
     'opsz' 26
 }
 
-.material-icons {
-    font-variation-settings:
-    'opsz' 48
-}
-
-@media (min-width: 769px){
-
-    /* ICONS */
-
-    .material-symbols-outlined {
-        font-variation-settings:
-        'opsz' 48
-    }
+.material-icons-sharp {
+    color: var(--full-black);
 }

@@ -33,10 +33,21 @@
     background-color: var(--light-gray);
 }
 
+.menor-list__item--button {
+    border: none;
+    background-color: transparent;
+}
+
 @media (min-width: 541px) {
 
     .menu-lateral-menor {
         display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    button[data-theme-button].menor-list__item--button {
+        display: none;
     }
 }
 
