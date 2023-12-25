@@ -22,6 +22,24 @@ Este projeto é uma réplica da tela de início do [YouTube](https://youtube.com
 
 ## ⬇️ Download do projeto
 
-O projeto pode ser baixado na íntegra <a href='' download>aqui</a>
+O projeto pode ser baixado na íntegra clicando em Code (botão verde) e (em baixo) download ZIP.
 
-## 🚧 Projeto em desenvolvimento 🚧
+## 🛠️ Executando o projeto
+
+Instale o projeto, abra no VSCode e execute com o live server.
+Ou [clique aqui](https://leandro-pessoa.github.io/youtube/index.html) para ver no github pages.
+
+## ⚛️ Tecnologias utilizadas
+
+As tecnologias utilizadas foram:
+
+- `HTML5`
+- `CSS3`
+- `JavaScript`
+- `YouTube Data API`
+- `momentjs`
+- `Google Fonts e Icons`
+
+## :hurtrealbad: Desenvolvedor
+
+Desenvolvido por [Leandro Pessoa](https://github.com/leandro-pessoa)
