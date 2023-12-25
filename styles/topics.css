@@ -31,6 +31,7 @@
     border-radius: 8px;
     font-weight: 500;
     transition: ease .2s;
+    color: var(--full-black);
 }
 
 .topics__list-item:hover {
@@ -38,7 +39,7 @@
 }
 
 .ativo {
-    background-color: var(--black);
+    background-color: var(--full-black);
     color: var(--white);
 }
 
@@ -48,16 +49,16 @@
     align-items: center;
     height: 55px;
     width: 60px;
-    background-color: white;
+    background-color: var(--white);
     z-index: 10;
 }
 
 .topics__button-container--left {
     display: none;
-    box-shadow: 30px 0px 10px white;
+    box-shadow: 30px 0px 10px var(--white);
 }
 .topics__button-container--right {
-    box-shadow: -30px 0px 10px white;
+    box-shadow: -30px 0px 10px var(--white);
 }
 
 .topics__button {

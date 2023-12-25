@@ -44,7 +44,7 @@
     right: 0;
     margin: .8em;
     padding: .2em .3em;
-    color: var(--white);
+    color: white;
     font-size: .9rem;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.534);
@@ -135,6 +135,8 @@
         width: 48%;
     }
 
+    /* IMG CONTAINER */
+
     .video__thumb {
         border-radius: 5px;
     }
@@ -148,6 +150,18 @@
 
     .video {
         width: 32%;
+    }
+
+    /* TITLE CONTAINER */
+
+    .video__title {
+        font-size: 1.1rem;
+    }
+
+    /* SMALL CONTAINER */
+
+    .small-container__item {
+        font-size: .9rem;
     }
 }
 

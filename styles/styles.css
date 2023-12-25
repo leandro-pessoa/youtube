@@ -65,3 +65,16 @@ body{
 .material-icons-sharp {
     color: var(--full-black);
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #0f0f0f;
+        --black: #fff;
+        --full-black: #fff;
+        --regular-gray: #aaa7a0;
+        --light-gray: #303030;
+        --extra-light-gray: #222222;
+        --xx-light-gray: #222222;
+        --tx-light-gray: #272727;
+    }
+}
