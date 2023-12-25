@@ -1,15 +1,27 @@
 // seleção de elementos HTML
 const videosContainer = document.querySelector('[data-videos-container]')
+const errorContainer = document.querySelector('[data-error-container]')
 
 // retorna a logo do canal, encontrando o canal pelo id, que será passado como parâmetro
 const getChannelThumb = async (channelId) => {
     try {
-        const res = await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&maxResults=6&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg`)
+        const res = await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&maxResults=20&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg`)
+
+        if(!res.ok) {
+            throw new Error(`Ocorreu algum erro. Status do erro: ${res.status}`)
+        }
+
         const channel = await res.json()
         return channel.items[0].snippet.thumbnails.default.url
     }
     catch (err) {
-
+        videosContainer.style.width = '100%'
+        errorContainer.style.display = 'flex'
+        errorContainer.innerHTML = `
+            <h2 class="error__title">
+                ${err}
+            </h2>
+        `
     }
 }
 
@@ -180,15 +192,24 @@ const renderizarVideos = (videos) => {
 // faz a requisição da API do youtube e executa a função 'renderizarVideos' com o resultado
 const getVideos = async () => {
     try {
-        const res = await fetch('https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=6&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg')
+        const res = await fetch('https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=20&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg')
+        if(!res.ok) {
+            throw new Error(`Ocorreu algum erro. Status do erro: ${res.status}`)
+        }
+        
         const videos = await res.json()
-
         renderizarVideos(videos.items)
     }
     catch(err) {
-
+        videosContainer.style.width = '100%'
+        errorContainer.style.display = 'flex'
+        errorContainer.innerHTML = `
+            <h2 class="error__title">
+                ${err}
+            </h2>
+        `
     }
 }
 
 // executa a função 'getVideos'
-// getVideos()
+getVideos()
