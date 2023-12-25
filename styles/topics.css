@@ -53,6 +53,7 @@
 }
 
 .topics__button-container--left {
+    display: none;
     box-shadow: 30px 0px 10px white;
 }
 .topics__button-container--right {
@@ -87,6 +88,10 @@
         padding: .6em 0;
         width: calc(100% - 90px);
     } 
+
+    .topics__button-container--left {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) {

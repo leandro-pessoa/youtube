@@ -4,7 +4,7 @@ const videosContainer = document.querySelector('[data-videos-container]')
 // retorna a logo do canal, encontrando o canal pelo id, que será passado como parâmetro
 const getChannelThumb = async (channelId) => {
     try {
-        const res = await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&maxResults=20&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg`)
+        const res = await fetch(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&maxResults=6&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg`)
         const channel = await res.json()
         return channel.items[0].snippet.thumbnails.default.url
     }
@@ -95,7 +95,7 @@ const formatarData = (data) => {
         return `há ${minutoAtual - minutoVideo} ${cond}`
     }
 
-    if(horaAtual - horaVideo && diaAtual == diaVideo && mesAtual == mesVideo && anoAtual == anoVideo){
+    if(horaAtual - horaVideo < 24 && diaAtual == diaVideo && mesAtual == mesVideo && anoAtual == anoVideo){
         const cond = horaAtual - horaVideo > 1 ? 'horas' : 'hora'
         return `há ${horaAtual - horaVideo} ${cond}`
     }
@@ -117,7 +117,7 @@ const formatarData = (data) => {
 }
 
 // renderiza cada vídeo adiquirido pela função 'getVideos'
-// também são executadas as funções 'getChannelThumb', 'formatarTempo' 
+// também são executadas as funções 'getChannelThumb', 'formatarTempo' e 'formatarData'
 const renderizarVideos = (videos) => {
 
     // laço de repetição com o array vindo do parâmetro
@@ -133,13 +133,14 @@ const renderizarVideos = (videos) => {
             const tempo = video.contentDetails.duration
             const tituloCanal = video.snippet.channelTitle
             const canalId = video.snippet.channelId
+            const videoId = video.id
             const views = video.statistics.viewCount
             const publicadoHa = video.snippet.publishedAt
 
             // template que será renderizado no HTML para cada vídeo
             const template = `
             <div class="video">
-                <a href="https://youtube.com" class="video__link">
+                <a href="https://youtube.com/watch?v=${videoId}" class="video__link" target="_blank" rel="external">
                     <div class="video__img-container">
                         <img src="${urlImg}" alt="thumnail do vídeo com o título ${titulo}" class="video__thumb">
                         <div class="tempo-container">${formatarTempo(tempo)}</div>
@@ -147,10 +148,10 @@ const renderizarVideos = (videos) => {
                 </a>
                 <div class="video__title-container">
                     <div class="title-container__logo-txt">
-                        <a href="https://youtube.com" target="_blank">
+                        <a href="https://youtube.com/channel/${canalId}" target="_blank" rel="external">
                             <img src="${data}" alt="Logo do canal ${tituloCanal}" class="channel-logo">
                         </a>
-                        <a href="" class="video__link">
+                        <a href="https://youtube.com/watch?v=${videoId}" class="video__link" target="_blank" rel="external">
                             <div>
                                 <h2 class="video__title">${titulo}</h2>
                                 <div class="video__small-container">
@@ -179,7 +180,7 @@ const renderizarVideos = (videos) => {
 // faz a requisição da API do youtube e executa a função 'renderizarVideos' com o resultado
 const getVideos = async () => {
     try {
-        const res = await fetch('https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=20&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg')
+        const res = await fetch('https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&chart=mostPopular&maxResults=6&key=AIzaSyC-MRxD8koOHYgzZ7kkkpKqf-cW1bO75hg')
         const videos = await res.json()
 
         renderizarVideos(videos.items)
@@ -191,4 +192,4 @@ const getVideos = async () => {
 }
 
 // executa a função 'getVideos'
-//getVideos()
+// getVideos()
