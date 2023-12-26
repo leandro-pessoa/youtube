@@ -198,6 +198,7 @@ const getVideos = async () => {
         }
         
         const videos = await res.json()
+        console.log(videos.items)
         renderizarVideos(videos.items)
     }
     catch(err) {
