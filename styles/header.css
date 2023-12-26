@@ -93,6 +93,7 @@
 .container-input__microphone-btn {
     border-radius: 50%;
     height: 35px;
+    width: 35px;
     border: none;
     align-self: center;
     transition: ease .1s;
