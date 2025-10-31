@@ -139,7 +139,8 @@
         flex-wrap: wrap;
         gap: 1em;
         left: 75px;
-        top: 120px;
+        top: 0px;
+        padding-top: 120px;
         height: calc(100% - 120px);
     }
 
@@ -172,6 +173,9 @@
 
     .videos-container {
         left: 260px;
+        top: 0;
+        
+        
     }
 
     .video {

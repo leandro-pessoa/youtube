@@ -3,9 +3,6 @@
 .topics-container {
     display: flex;
     flex-direction: row;
-    position: fixed;
-    top: 56.3px;
-    background-color: var(--white);
     width: 100%;
     left: 0;
 }

@@ -18,47 +18,104 @@
 </head>
 <body>
     <header class="cabecalho">
-        <section class="cabecalho__container-logo">
-            <button class="cabecalho__icon-button" data-menu-button>
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-            <a href="#">
-                <img src="./assets/youtube-logo-9.png" alt="Logo do YouTube" class="cabecalho__logo">
-            </a>
-        </section>
-        <section class="cabecalho__container-input">
-            <div class="cabecalho__search-container" data-search-container>
-                <span class="material-symbols-outlined search-container__icon" data-icon>search</span>
-                <input type="search" name="busca" id="busca"  placeholder="Pesquisar" class="container-input__search" data-search>
-                <span class="material-icons-sharp keyboard">keyboard</span>
+        <section class="cabecalho__header">
+            <div class="cabecalho__container-logo">
+                <button class="cabecalho__icon-button" data-menu-button>
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <a href="#">
+                    <img src="./assets/youtube-logo-9.png" alt="Logo do YouTube" class="cabecalho__logo">
+                </a>
             </div>
-            <button class="container-input__search-btn">
-                <span class="material-symbols-outlined">search</span>
-            </button>
-            <button class="container-input__microphone-btn">
-                <span class="material-icons-sharp mic">mic</span>
-            </button>
-        </section>
-        <section class="cabecalho__container-icons">
-            <div class="container-icons__smartphone">
-                <button class="icon-button"><span class="material-symbols-outlined">cast</span></button>
-                <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
-                <button class="icon-button"><span class="material-symbols-outlined">search</span></button>
-                <button class="icon-button" data-theme-button>
-                    <span class="material-symbols-outlined" data-theme-icon>
-                        light_mode <!-- dark_mode -->
-                    </span>
+            <div class="cabecalho__container-input">
+                <div class="cabecalho__search-container" data-search-container>
+                    <span class="material-symbols-outlined search-container__icon" data-icon>search</span>
+                    <input type="search" name="busca" id="busca"  placeholder="Pesquisar" class="container-input__search" data-search>
+                    <span class="material-icons-sharp keyboard">keyboard</span>
+                </div>
+                <button class="container-input__search-btn">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="container-input__microphone-btn">
+                    <span class="material-icons-sharp mic">mic</span>
                 </button>
             </div>
-            <div class="container-icons__outros">
-                <button class="icon-button"><span class="material-symbols-outlined">video_call</span></button>
-                <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
-                <button class="icon-button"><span class="material-icons-sharp">account_circle</span></button>
-                <button class="icon-button" data-theme-button>
-                    <span class="material-symbols-outlined" data-theme-icon>
-                        light_mode <!-- dark_mode -->
-                    </span>
-                </button>
+            <div class="cabecalho__container-icons">
+                <div class="container-icons__smartphone">
+                    <button class="icon-button"><span class="material-symbols-outlined">cast</span></button>
+                    <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
+                    <button class="icon-button"><span class="material-symbols-outlined">search</span></button>
+                    <button class="icon-button" data-theme-button>
+                        <span class="material-symbols-outlined" data-theme-icon>
+                            light_mode <!-- dark_mode -->
+                        </span>
+                    </button>
+                </div>
+                <div class="container-icons__outros">
+                    <button class="icon-button"><span class="material-symbols-outlined">video_call</span></button>
+                    <button class="icon-button"><span class="material-symbols-outlined">notifications</span></button>
+                    <button class="icon-button"><span class="material-icons-sharp">account_circle</span></button>
+                    <button class="icon-button" data-theme-button>
+                        <span class="material-symbols-outlined" data-theme-icon>
+                            light_mode <!-- dark_mode -->
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="cabecalho__topics">
+            <div class="topics-container" data-container-topics>
+                <div class="topics__button-container topics__button-container--left">
+                    <button class="topics__button topics__button--left" data-button-left>
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                </div>
+                <ul class="topics-list" data-topics>
+                    <li class="topics__list-item ativo">
+                        Tudo
+                    </li>
+                    <li class="topics__list-item">
+                        Jogos
+                    </li>
+                    <li class="topics__list-item">
+                        Notícias
+                    </li>
+                    <li class="topics__list-item">
+                        Podcast
+                    </li>
+                    <li class="topics__list-item">
+                        Programação
+                    </li>
+                    <li class="topics__list-item">
+                        Música
+                    </li>
+                    <li class="topics__list-item">
+                        História
+                    </li>
+                    <li class="topics__list-item">
+                        Ao vivo
+                    </li>
+                    <li class="topics__list-item">
+                        Vídeo games
+                    </li>
+                    <li class="topics__list-item">
+                        JavaScript
+                    </li>
+                    <li class="topics__list-item">
+                        Enviados recentemente
+                    </li>
+                    <li class="topics__list-item">
+                        Postagens
+                    </li>
+                    <li class="topics__list-item">
+                        Novidades para você
+                    </li>
+                </ul>
+                <div class="topics__button-container topics__button-container--right">
+                    <button class="topics__button topics__button--right" data-button-right>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
             </div>
         </section>
     </header>
@@ -312,59 +369,7 @@
             </ul>
         </aside>
 
-        <section class="topics-container" data-container-topics>
-            <div class="topics__button-container topics__button-container--left">
-                <button class="topics__button topics__button--left" data-button-left>
-                    <span class="material-symbols-outlined">chevron_left</span>
-                </button>
-            </div>
-            <ul class="topics-list" data-topics>
-                <li class="topics__list-item ativo">
-                    Tudo
-                </li>
-                <li class="topics__list-item">
-                    Jogos 
-                </li>
-                <li class="topics__list-item">
-                    Notícias
-                </li>
-                <li class="topics__list-item">
-                    Podcast
-                </li>
-                <li class="topics__list-item">
-                    Programação
-                </li>
-                <li class="topics__list-item">
-                    Música
-                </li>
-                <li class="topics__list-item">
-                    História
-                </li>
-                <li class="topics__list-item">
-                    Ao vivo
-                </li>
-                <li class="topics__list-item">
-                    Vídeo games
-                </li>
-                <li class="topics__list-item">
-                    JavaScript
-                </li>
-                <li class="topics__list-item">
-                    Enviados recentemente
-                </li>
-                <li class="topics__list-item">
-                    Postagens
-                </li>
-                <li class="topics__list-item">
-                    Novidades para você
-                </li>
-            </ul>
-            <div class="topics__button-container topics__button-container--right">
-                <button class="topics__button topics__button--right" data-button-right>
-                    <span class="material-symbols-outlined">chevron_right</span>
-                </button>
-            </div>
-        </section>
+        
 
         <section class="videos-container" data-videos-container>
             <div class="videos-container__error" data-error-container>

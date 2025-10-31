@@ -19,6 +19,8 @@ const mudarTema = () => {
         theme = !theme
         chng('--white', '#0f0f0f')
         chng('--black', '#fff')
+        chng('--header-black', '#ffffffcb')
+        chng('--header-white', '#0f0f0fcb')
         chng('--full-black', '#fff')
         chng('--regular-gray', '#aaa7a0')
         chng('--light-gray', '#303030')
@@ -33,6 +35,8 @@ const mudarTema = () => {
         theme = !theme
         chng('--white', '#ffffff')
         chng('--black', '#0f0f0f')
+        chng('--header-white', '#ffffffcb')
+        chng('--header-black', '#0f0f0fcb')
         chng('--full-black', '#000')
         chng('--regular-gray', '#606060')
         chng('--light-gray', '#ccc')

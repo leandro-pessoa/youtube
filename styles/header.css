@@ -2,14 +2,32 @@
 
 .cabecalho {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     padding: .3em .6em .7em .6em;
     position: fixed;
     width: calc(100% - .6em);
+    z-index: 10;
+    background-color: var(--header-white);
+    backdrop-filter: blur(30px);
+}
+
+.cabecalho__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho__topics {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* SECTION LOGO E MENU */
+
+.cabecalho__container-logo {
+    display: flex;
+    align-items: center;
+}
 
 .cabecalho__icon-button {
     display: none;

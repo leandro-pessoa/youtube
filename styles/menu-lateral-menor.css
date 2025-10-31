@@ -8,6 +8,7 @@
     padding: .3em;
     height: calc(100vh - 64.31px);
     overflow-y: auto;
+    z-index: 12;
 }
 
 .menor-list {

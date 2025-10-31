@@ -16,8 +16,10 @@
     --desktop-breakpoint: 1280px;
     --font-principal: 'Roboto', sans-serif;
     --white: #FFFFFF;
+    --header-white: #FFFFFFCB;
     --full-black: #000000;
     --black: #0F0F0F;
+    --header-black: #0F0F0FCB;
     --dark-gray: #363636;
     --regular-gray: #606060;
     --extra-regular-gray: #8a8a8a;
@@ -70,6 +72,8 @@ body{
     :root {
         --white: #0f0f0f;
         --black: #fff;
+        --header-black: #ffffffcb;
+        --header-white: #0f0f0fcb;
         --full-black: #fff;
         --regular-gray: #aaa7a0;
         --light-gray: #303030;
