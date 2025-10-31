@@ -197,3 +197,9 @@
     }
 }
 
+@media (min-width: 1800px) {
+    .video {
+        width: 24%;
+    }
+}
+
