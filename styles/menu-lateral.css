@@ -44,6 +44,9 @@
     align-items: center;
     text-decoration: none;
     color: var(--full-black);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .list__item > span,

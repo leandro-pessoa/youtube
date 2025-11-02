@@ -69,6 +69,7 @@
     width: 100%;
     padding: .4em;
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.089);
+    background-color: var(--white);
 }
 
 .cabecalho__search-container-focus {
@@ -194,7 +195,7 @@
 @media (min-width: 769px){
 
     .cabecalho {
-        padding: .5em 1em 1em 1em;
+        padding: .5em 1em 0em 1em;
         width: 98%;
     }
 

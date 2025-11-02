@@ -94,6 +94,12 @@
 .video__title {
     font-size: 1rem;
     color: var(--black);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; /* Required for -webkit-line-clamp */
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
+    line-clamp: 2; /* Standard property for modern browsers */
 }
 
 /* SMALL CONTAINER */
