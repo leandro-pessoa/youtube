@@ -46,16 +46,12 @@
     align-items: center;
     height: 55px;
     width: 60px;
-    background-color: var(--white);
+    background-color: transparent;
     z-index: 10;
 }
 
 .topics__button-container--left {
     display: none;
-    box-shadow: 30px 0px 10px var(--white);
-}
-.topics__button-container--right {
-    box-shadow: -30px 0px 10px var(--white);
 }
 
 .topics__button {
